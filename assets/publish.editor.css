@@ -21,11 +21,12 @@
 }
 
 .editor-toolbar a {
-  color: #a9a9a9 !important;
+  color: #222 !important;
+  opacity: 0.5;
 }
 .editor-toolbar a:hover, .editor-toolbar a.active {
 	background-color: #fff;
-  color: #222 !important;
+  opacity: 1;
   border-radius: 2px;
 }
 .editor-toolbar a.icon-fullscreen {
