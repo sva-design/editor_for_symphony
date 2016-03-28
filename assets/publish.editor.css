@@ -1,26 +1,15 @@
 /* start Symphony-esque look for editor */
 
 .editor-toolbar {
-	margin-top: 4px; /* slightly bigger margin as component is massive */
-	padding: 4px;
-	font-size: 14px;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	-webkit-border-top-left-radius: 2px;
-	-moz-border-radius-topleft: 2px;
-	border-top-left-radius: 2px;
-	-webkit-border-top-right-radius: 2px;
-	-moz-border-radius-topright: 2px;
-	border-top-right-radius: 2px;
-	box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1);
+	margin-top: 2px;
+	font-size: 13px;
+	padding: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.25);
 	opacity: 1 !important;
 	z-index: 5;
-}
-.editor-toolbar:hover > * {
-	opacity: 0.8;
-}
-
-.editor-toolbar > * {
-	opacity: 0.6;
+	background-color: #f5f5f5;
+	border-top-left-radius: .4rem;
+	border-top-right-radius: .4rem;
 }
 
 .editor-toolbar:before, .editor-toolbar:after {
@@ -31,39 +20,58 @@
 	z-index: 4;
 }
 
+.editor-toolbar a {
+  color: #a9a9a9 !important;
+}
+.editor-toolbar a:hover, .editor-toolbar a.active {
+	background-color: #fff;
+  color: #222 !important;
+  border-radius: 2px;
+}
+.editor-toolbar a.icon-fullscreen {
+	display: none;
+}
+
 .CodeMirror {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	padding: 10px;
+	background-color: #f5f5f5;
 	width: 100%;
-	padding: 6px 6px 2px;
 	font-size: 109.09%;
 	border: 1px solid rgba(0, 0, 0, 0.25);
 	border-width: 0 1px 1px 1px;
-	-webkit-border-bottom-right-radius: 2px;
-	-moz-border-radius-bottomright: 2px;
-	border-bottom-right-radius: 2px;
-	-webkit-border-bottom-left-radius: 2px;
-	-moz-border-radius-bottomleft: 2px;
-	border-bottom-left-radius: 2px;
-	background: #fff;
-	outline: none;
 	height: auto;
 	min-height: 5em;
 }
+.CodeMirror-lines,
+.CodeMirror pre {
+  padding: 0;
+}
 
 .invalid .CodeMirror {
-	color: #000;
+	color: #d42;
 }
 
 .editor-statusbar {
 	font-size: 1em;
+	padding: 2px 0;
+	border-top: 0;
 }
 
 .editor-preview {
 	box-sizing: border-box;
-	padding: 20px;
-	background: #fbfbfb;
+	padding: 10px;
+	background-color: #fff;
+}
+
+.editor-preview p {
+	margin-bottom: 1.4em; /* matches editor */
+}
+
+.editor-preview img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
 }
 
 /* end Symphony-esque look for editor */
