@@ -26,5 +26,21 @@
 
     $(function() {
         $('textarea[class*="markdown"], textarea[class*="commonmark"]').editorify();
+
+        // replace uploaded asset link text with Markdown image syntax
+        var uploadFields = $('.field-upload:not(.required)'); // get uploads, excluding the required thumbnail
+        uploadFields.each(function() {
+            var hasUploaded = ($(this).find('span.frame span').length > 0);
+            if (hasUploaded) {
+                $(this).find('a').html($(this).find('a').html().replace($(this).find('a').text(),''));
+
+                // contents().filter(function(){
+                //     return (this.nodeType == 3);
+                // }).remove();
+                var path = $(this).find('input').attr('value');
+                $(this).find('.frame').append('<div style="clear: both; cursor: text; padding: 0.2em 0.2em 0.2em 0;">![](' + path + ')</div>');
+            }
+        });
+
     });
 }(this.jQuery));
